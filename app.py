@@ -1,6 +1,7 @@
 from flask import Flask, Request
 # import requests
 import psycopg2
+# from pydantic import BaseModel
 
 app = Flask(__name__)
 
@@ -15,9 +16,17 @@ dbname = 'koyebdb'
 user = 'black_and_white_2'
 passwd = 'npg_V9smkvLSd0CJ'
 
-# db = psycopg2.connect(host=host, dbname=dbname,user=user,password= passwd,port=5432)
-# db = psycopg2.connect(host=host, dbname=dbname,user=user,password= passwd,port=5432)
-# cur=db.cursor()
+# db = psycopg2.connect(host=host, user=user, password=passwd, dbname=dbname, port=5432)
+db = psycopg2.connect(
+    host="ep-square-hat-ahdj2h0r.c-3.us-east-1.pg.koyeb.app",
+    dbname="koyebdb",
+    user="black_and_white_2",
+    password="npg_V9smkvLSd0CJ",
+    port=5432,
+    sslmode="require",
+    options="-c endpoint=ep-square-hat-ahdj2h0r"
+)
+cur=db.cursor()
 
 @app.route('/')
 def hello_world():
