@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, Request
 # import requests
 import psycopg2
 
@@ -16,12 +16,32 @@ user = 'black_and_white_2'
 passwd = 'npg_V9smkvLSd0CJ'
 
 # db = psycopg2.connect(host=host, dbname=dbname,user=user,password= passwd,port=5432)
-db = psycopg2.connect(host=host, dbname=dbname,user=user,password= passwd,port=5432)
+# db = psycopg2.connect(host=host, dbname=dbname,user=user,password= passwd,port=5432)
 # cur=db.cursor()
 
 @app.route('/')
 def hello_world():
-    return 'welcome user!'
+    return 'welcome user!?'
+
+
+@app.route('/api/hello', methods=['POST'])
+def hello():
+    body = Request.get_json() # 사용자가 입력한 데이터
+
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                    "simpleText": {
+                        "text": "시작하셔도 됩니다."
+                    }
+                }
+            ]
+        }
+    }
+
+    return responseBody
 
 
 
