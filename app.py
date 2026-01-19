@@ -1,7 +1,6 @@
 from flask import Flask, Request
 # import requests
 import psycopg2
-# from pydantic import BaseModel
 
 app = Flask(__name__)
 
@@ -30,27 +29,27 @@ cur=db.cursor()
 
 @app.route('/')
 def hello_world():
-    return 'welcome user!?'
+    return 'welcome woobs!?'
 
 
-@app.route('/api/hello', methods=['POST'])
-def hello():
-    body = Request.get_json() # 사용자가 입력한 데이터
+# @app.route('/api/hello', methods=['POST'])
+# def hello():
+#     body = Request.get_json() # 사용자가 입력한 데이터
 
-    responseBody = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                    "simpleText": {
-                        "text": "시작하셔도 됩니다."
-                    }
-                }
-            ]
-        }
-    }
+#     responseBody = {
+#         "version": "2.0",
+#         "template": {
+#             "outputs": [
+#                 {
+#                     "simpleText": {
+#                         "text": "시작하셔도 됩니다."
+#                     }
+#                 }
+#             ]
+#         }
+#     }
 
-    return responseBody
+#     return responseBody
 
 
 
