@@ -10,21 +10,13 @@ app = Flask(__name__)
 # cur=db.cursor()
 
 # # baw2 서버 db
-host = 'ep-square-hat-ahdj2h0r.c-3.us-east-1.pg.koyeb.app'
+host = 'ep-square-art-a1z9cevu.ap-southeast-1.pg.koyeb.app'
 dbname = 'koyebdb'
-user = 'black_and_white_2'
-passwd = 'npg_V9smkvLSd0CJ'
+user = 'blackwhite2'
+passwd = 'npg_0yM9hKGPBlkX'
 
-# db = psycopg2.connect(host=host, user=user, password=passwd, dbname=dbname, port=5432)
-db = psycopg2.connect(
-    host="ep-square-hat-ahdj2h0r.c-3.us-east-1.pg.koyeb.app",
-    dbname="koyebdb",
-    user="black_and_white_2",
-    password="npg_V9smkvLSd0CJ",
-    port=5432,
-    sslmode="require",
-    options="-c endpoint=ep-square-hat-ahdj2h0r"
-)
+db = psycopg2.connect(host=host, user=user, password=passwd, dbname=dbname, port=5432)
+
 cur=db.cursor()
 
 @app.route('/')

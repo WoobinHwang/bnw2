@@ -1,11 +1,13 @@
 import psycopg2
 
-# ep-small-union-a4lckkw6.us-east-1.pg.koyeb.app
-host = 'ep-square-hat-ahdj2h0r.c-3.us-east-1.pg.koyeb.app'
+# # baw2 서버 db
+host = 'ep-square-art-a1z9cevu.ap-southeast-1.pg.koyeb.app'
 dbname = 'koyebdb'
-user = 'black_and_white_2'
-passwd = 'npg_V9smkvLSd0CJ'
-db = psycopg2.connect(host=host, dbname=dbname,user=user,password= passwd,port=5432)
+user = 'blackwhite2'
+passwd = 'npg_0yM9hKGPBlkX'
+
+db = psycopg2.connect(host=host, user=user, password=passwd, dbname=dbname, port=5432)
+
 cur=db.cursor()
 
 ## table information ##
