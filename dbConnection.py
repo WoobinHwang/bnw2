@@ -35,8 +35,8 @@ text = '2'
     # print(user_last_rows)
 
 ## insert ##
-    # cur.execute("INSERT INTO blackwhite2 (userid, channel, score, turn, numbers, usenum, result) VALUES (%s, %s, %s, %s, %s, %s, %s);"
-    #     , (id_data, channel_data, user_last_rows[2], user_last_rows[3] + 1, user_last_rows[4] - int(text), int(text), user_last_rows[6]))
+# cur.execute("INSERT INTO blackwhite2 (userid, channel, score, turn, numbers, usenum, result) VALUES (%s, %s, %s, %s, %s, %s, %s);"
+#     , (id_data, channel_data, user_last_rows[2], user_last_rows[3] + 1, user_last_rows[4] - int(text), int(text), user_last_rows[6]))
 
 
 
